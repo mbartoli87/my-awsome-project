@@ -12,11 +12,11 @@ function displayTemperature(response) {
   document.querySelector(".temp").innerHTML = Math.round(celsiusTemperature);
   document.querySelector(".city").innerHTML = response.data.name;
   document.querySelector(".description").innerHTML = response.data.weather[0].description;
-  document.querySelector(".humidity").innerHTML = response.data.main.humidity;
-  document.querySelector(".wind").innerHTML = Math.round(response.data.wind.speed);
-  document.querySelector(".date").innerHTML = formatDate(response.data.dt *1000);
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector(".date").innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector(".icon");
-  iconElement.setAttribute("src", 'https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png');
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(city) {
@@ -43,7 +43,7 @@ function showFahrenheit(event) {
 
 let celsiusTemperature = null;
 
-let fahrenheitLink = document.querySelector(".fharenheit");
+let fahrenheitLink = document.querySelector(".fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 
 function showCelsius(event) {
