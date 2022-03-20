@@ -11,90 +11,68 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Weather App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+  </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="search"
-                placeholder="Insert a city"
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
-              />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
-            </div>
-          </div>
-        </form>
-        <hr />
-        <h1 id="city"></h1>
-        <ul>
-          <li>Last updated: <span id="date"></span></li>
-          <li id="description"></li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <div class="float-left">
-                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  
-                  <div class="weather">
-                    <h2 class="city">Rome</h2>
-                    <p class="date"></p>
-                    <div class="flex">
-                      <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon text-center" />
-                        <div class="description">Cloudy</div>
-                    </div>
-
-                    <div>
-                      <strong class="temp">-13
-                      </strong>
-                      <a href="#" class="celsius-active">°C</a> | <a href="#" class="fahrenheit">°F</a>
-                  </div>
-                  <div class="degree">
-                    </div>
-                </span>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
               </div>
             </div>
-          </div>
-          <div class="col-6">
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <small>
+          <a
+            href="https://github.com/mbartoli87/my-awsome-project"
+            target="_blank">Open-source code</a>by Martina Bartoli</small>
       </div>
     </div>
-    <div><a href="https://github.com/mbartoli87/my-awsome-project" target="_blank" class="open-source">Open-source code</a> by Martina Bartoli</div>
     <script src="script.js"></script>
   </body>
 </html>
