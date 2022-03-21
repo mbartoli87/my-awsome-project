@@ -39,7 +39,7 @@ li:first-letter {
 .weather-app {
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .overview {
