@@ -79,7 +79,9 @@ img.current-img {
 .temperature-min {
   opacity: 0.4;
 }
-
 h5 {
+  font-family: 'Quicksand', sans-serif;
+}
+.container {
   font-family: 'Quicksand', sans-serif;
 }
